@@ -32,4 +32,4 @@ Should return an array like so:
 ## Features
 
   * Case insensetive
-  *return -1 if there are no occurences
+  * return -1 if there are no occurences
