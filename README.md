@@ -1,37 +1,35 @@
-# auto-api
-Small REST API with db simulation for practice purpose
+# every-index-of
 
-The genaral idea is to use GET, POST, PUT and DELETE HTTP verbs to access a non secure route to studia frontend tecnologies abstracting the backend.
-If you post on any route it will create the routo and store the data automatically.
-
-# Notice
-
-Not yeat complete
-
+Simple piece of code tha returns every occurence of a single character in a string by it index.
 
 ## Installation
 
 ```bash
-$ npm install auto-api
+$ npm install every-index-of
 ```
 
 # Usage
 
 ```js
-var autoAPI = require('auto-api');
+var evrIndex = require('every-index-of');
+
+let all;
+
+evrIndex('m', 'Common', (err, indexes)=>{
+	if (err) { throw err; }
+
+	all = indexes;
+})
 
 ```
-```bash
-$ npm start (will start on port 9000, with nodemon and jshint)
-```
-```bash
-$ node app.js 8000 (will start on port 8000)
+
+Should return an array like so:
+
+```js
+[2,3]
 ```
 
 ## Features
 
-  * Can consume GET, POST, PUT or DELETE
-  * It will persist the data in files, simulating a database
-  * Super-high test coverage
-  * Can use both limit and skip for listing
-  * Perfect to abstract server on Angular studing
+  * Case insensetive
+  *return -1 if there are no occurences
