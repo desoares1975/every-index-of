@@ -1,0 +1,33 @@
+{
+  "name": "every-index-of",
+  "version": "0.0.1",
+  "description": "Returns every index o a given character in an string.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'everyIndexOf test mode...'; jshint ./; ./node_modules/.bin/nodemon --exec mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/desoares1975/every-index-of.git"
+  },
+  "keywords": [
+    "all",
+    "indexes",
+    "of",
+    "string"
+  ],
+  "author": "desoares",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/desoares1975/every-index-of/issues"
+  },
+  "homepage": "https://github.com/desoares1975/every-index-of#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "jshint": "^2.9.1",
+    "nodemon": "^1.9.1"
+  },
+  "dependencies": {
+    "mocha": "^2.4.5"
+  }
+}
