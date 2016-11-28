@@ -22,6 +22,13 @@ evrIndex('m', 'Common', (err, indexes)=>{
 })
 
 ```
+
+Should return an array like so:
+
+```js
+[2, 3]
+```
+
 #Or the case sensitive vertion:
 
 ```js
@@ -37,7 +44,7 @@ evrIndex('M', 'Common', true, (err, indexes)=>{
 
 ```
 
-Should return an array like so:
+Should return:
 
 ```js
 -1
