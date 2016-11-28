@@ -45,4 +45,33 @@ describe('everyIndexOf', ()=>{
 			 done();
 		});
 	});
+
+	describe('Test case sensitivety', () => {
+		it('Test the "Os" in Onomatopoeic', (done)=>{
+			everyIndexOf('o', 'Onomatopoeic', true, (err, indexes)=>{
+				if(err) {return cb(err);}
+				 expect(indexes).to.be.an('array');
+				 expect(indexes.length).equal(3);
+				 done();
+			});
+		});
+		it('Test if returns case sensitivety of "Ss" in aSS', (done)=>{
+			everyIndexOf('s', 'aSS', true, (err, indexes)=>{
+				if(err) {return cb(err);}
+				 expect(indexes).to.be.an('number');
+				 expect(indexes).equal(-1);
+				 done();
+			});
+		});
+		it('Test if returns case sensitivety of "Ss" in saSS part 3', (done)=>{
+			everyIndexOf('S', 'saSS', true, (err, indexes)=>{
+				if(err) {return cb(err);}
+				 expect(indexes).to.be.an('array');
+				 expect(indexes.length).equal(2);
+				 expect(indexes[0]).equal(2);
+				 expect(indexes[1]).equal(3);
+				 done();
+			});
+		});
+	});
 });

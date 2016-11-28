@@ -22,11 +22,25 @@ evrIndex('m', 'Common', (err, indexes)=>{
 })
 
 ```
+#Or the case sensitive vertion:
+
+```js
+var evrIndex = require('every-index-of');
+
+let all;
+
+evrIndex('M', 'Common', true, (err, indexes)=>{
+    if (err) { throw err; }
+
+    all = indexes;
+})
+
+```
 
 Should return an array like so:
 
 ```js
-[2,3]
+-1
 ```
 
 ## Features

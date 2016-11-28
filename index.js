@@ -1,9 +1,15 @@
 /* jshint esversion: 6, strict: true*/
-module.exports = (char, str, cb) => {
+module.exports = (char, str, cs, cb) => {
 	'use strict';
+	if (cs !== true) {
+		char = 	char.toLowerCase();
+		str = str.toLowerCase();
+	}
 
-	char = 	char.toLowerCase();
-	str = str.toLowerCase();
+	if (!cb) {
+		cb = cs;
+	}
+
 	let indexes = [];
 	for (let i = 0; i < str.length; i++) {
 

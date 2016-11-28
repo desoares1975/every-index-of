@@ -1,6 +1,6 @@
 {
   "name": "every-index-of",
-  "version": "1.0.2",
+  "version": "1.2.0",
   "description": "Returns every index o a given character in an string.",
   "main": "index.js",
   "scripts": {
